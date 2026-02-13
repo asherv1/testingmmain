@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 3 Feedback by Mall</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Top 3 Feedback by Mall</h1>
+      <p class="subtitle">Upload not required. All data is loaded directly from MySQL views.</p>
+
+      <section class="filters">
+        <label>
+          Mall
+          <select id="mall"></select>
+        </label>
+        <label>
+          Year
+          <select id="year"></select>
+        </label>
+        <label>
+          Month
+          <select id="month">
+            <option value="">All months</option>
+            <option value="1">Jan</option>
+            <option value="2">Feb</option>
+            <option value="3">Mar</option>
+            <option value="4">Apr</option>
+            <option value="5">May</option>
+            <option value="6">Jun</option>
+            <option value="7">Jul</option>
+            <option value="8">Aug</option>
+            <option value="9">Sep</option>
+            <option value="10">Oct</option>
+            <option value="11">Nov</option>
+            <option value="12">Dec</option>
+          </select>
+        </label>
+      </section>
+
+      <section id="grid" class="month-grid"></section>
+    </main>
+
+    <template id="card-template">
+      <article class="month-card">
+        <header>
+          <h2 class="month-name"></h2>
+        </header>
+        <ol class="feedback-list"></ol>
+        <footer class="meta"></footer>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
