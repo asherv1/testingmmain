@@ -1,0 +1,90 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 18px;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  background: #e2e8f0;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: white;
+}
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.month-card {
+  background: #fff;
+  border: 1px solid #dbe4ef;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.month-name {
+  margin: 0 0 8px;
+}
+
+.feedback-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.feedback-list li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.feedback-list small {
+  display: block;
+  color: #64748b;
+}
+
+.meta {
+  margin-top: 12px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 8px;
+  color: #475569;
+  font-size: 13px;
+}
