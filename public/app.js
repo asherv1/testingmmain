@@ -2,6 +2,8 @@ const mallEl = document.getElementById('mall');
 const yearEl = document.getElementById('year');
 const monthEl = document.getElementById('month');
 const gridEl = document.getElementById('grid');
+
+gridEl.textContent = 'Loading dashboard data...';
 const template = document.getElementById('card-template');
 
 async function fetchJSON(url) {
@@ -81,7 +83,15 @@ async function init() {
 
     await refresh();
   } catch (error) {
-    gridEl.textContent = `Failed to load dashboard: ${error.message}`;
+    gridEl.innerHTML = '';
+    const message = document.createElement('div');
+    message.style.color = '#b91c1c';
+    message.style.background = '#fee2e2';
+    message.style.border = '1px solid #fecaca';
+    message.style.padding = '12px';
+    message.style.borderRadius = '8px';
+    message.textContent = `Failed to load dashboard: ${error.message}`;
+    gridEl.appendChild(message);
   }
 }
 
